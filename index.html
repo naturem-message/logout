@@ -12,9 +12,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
         <script>
-            // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
             Kakao.init('04b17b163c8c5855765076c465461ac1');
-            // SDK 초기화 여부를 판단합니다.
             console.log(Kakao.isInitialized());
         </script>
     </head>
@@ -58,16 +56,19 @@
                     <img src="https://raw.githubusercontent.com/naturem-message/logout/main/%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83.PNG" widht=164 height=50 alt="로그아웃" onclick="unlinkApp()">
                     <script type="text/javascript">
                       function unlinkApp() {
-                        Kakao.API.request({
-                          url: '/v1/user/unlink',
-                          success: function(res) {
-                            alert('success: ' + JSON.stringify(res))
-                          },
-                          fail: function(err) {
-                            alert('fail: ' + JSON.stringify(err))
-                          },
-                        })
-                      }
+                        if (Kakao.Auth.getAccessToken()) {
+                          Kakao.API.request({
+                            url: '/v1/user/unlink',
+                            success: function (response) {
+                                console.log(response)
+                            },
+                            fail: function (error) {
+                              console.log(error)
+                            },
+                          })
+                          Kakao.Auth.setAccessToken(undefined)
+                        }
+                      }  
                     </script>
                     </a>
                 </div>
