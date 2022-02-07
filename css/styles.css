@@ -77,13 +77,36 @@
 }
 
 .api-btn {
-  min-width: 222px;
-  height: 49px;
-  line-height: 49px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #000;
-  background-color: #ffeb00;
+    background-color: #ffeb00;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    height: 49px;
+    line-height: 49px;
+    min-width: 222px;
+    outline: none;
+    font-family: NotoSans DemiLight,Malgun Gothic,맑은 고딕,Apple SD Gothic Neo,돋움,dotum,sans-serif;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    appearance: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-stretch: ;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    box-sizing: border-box;
 }
 
 body {
@@ -344,10 +367,6 @@ label {
 }
 
 button {
-  outline: none;
-  font-family: NotoSans DemiLight,Malgun Gothic,맑은 고딕,Apple SD Gothic Neo,돋움,dotum,sans-serif;
-  border: 0;
-  vertical-align: middle;
   border-radius: 0;
 }
 
