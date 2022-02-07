@@ -344,6 +344,10 @@ label {
 }
 
 button {
+  outline: none;
+  font-family: NotoSans DemiLight,Malgun Gothic,맑은 고딕,Apple SD Gothic Neo,돋움,dotum,sans-serif;
+  border: 0;
+  vertical-align: middle;
   border-radius: 0;
 }
 
