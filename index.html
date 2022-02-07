@@ -62,7 +62,8 @@
                           Kakao.API.request({
                             url: '/v1/user/unlink',
                             success: function (response) {
-                                console.log(response)
+                                console.log(response);
+                                alert('수신거부 처리되었습니다.')
                             },
                             fail: function (error) {
                               console.log(error)
