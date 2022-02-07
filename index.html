@@ -53,21 +53,19 @@
                     <p>더 이상 메시지 수신을 원하지 않으실 경우 서비스를 탈퇴하시면 수신거부 처리됩니다.</p>
                     <p>&nbsp;</p>
                     <button class="api-btn" onclick="unlinkApp()" width=200>탈퇴하기</button>
-
                     <script type="text/javascript">
                       function unlinkApp() {
                         Kakao.API.request({
                           url: '/v1/user/unlink',
                           success: function(res) {
-                            alert('success: ' + JSON.stringify(res))
+                            alert('탈퇴 처리가 완료되었습니다.')
                           },
                           fail: function(err) {
-                            alert('fail: ' + JSON.stringify(err))
+                            alert('로그인 되어 있지 않습니다.')
                           },
                         })
                       }
                     </script>
-
                 </div>
             </div>
         </div>
