@@ -76,6 +76,16 @@
   }
 }
 
+.api-btn {
+  min-width: 222px;
+  height: 49px;
+  line-height: 49px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  background-color: #ffeb00;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
